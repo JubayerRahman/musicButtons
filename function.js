@@ -18,6 +18,9 @@ window.addEventListener('load', function(){
         const booble = document.createElement('div');
         visual.appendChild(booble)
         booble.style.backgroundColor = colors[index];
-        booble.style.animation='jump 1s ease-in'
+        booble.style.animation='jump 1s ease-in';
+        booble.addEventListener('animationend', function(){
+            visual.removeChild(booble);
+        })
     }
 })
